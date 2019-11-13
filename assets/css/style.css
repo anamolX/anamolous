@@ -229,6 +229,9 @@ body {
             box-sizing: border-box;
     width: 100%;
   }
+  .dashboard-wrapper .dash-info {
+    padding-right: 2em;
+  }
   .dashboard-wrapper .dash-info-logo {
     font-weight: 700;
     font-style: italic;
@@ -243,6 +246,10 @@ body {
     -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-column-gap: 0;
+  }
+  .card-title {
+    font-size: 1.2em !important;
+    font-weight: 500 !important;
   }
 }
 /*# sourceMappingURL=style.css.map */
