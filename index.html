@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="./assets/img/favicon.ico" />
+    <title>Passket</title>
+
+     <!-- Materialize -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+     
+     <!-- Google Fonts -->
+     <link href="https://fonts.googleapis.com/css?family=Poppins:400,800&display=swap" rel="stylesheet">
+     
+      <!-- My Css -->
+      <link rel="stylesheet" href="./assets/css/style.css">
+      <script src="https://kit.fontawesome.com/f0d8590a67.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <section class="left-navbar blue-grey darken-4 h-100v center">
+        <ul>
+            <li class="logo"><a href="#">PK</a></li>
+            <li><a href="#" class="active tooltipped" data-position="right" data-tooltip="Dashboard"><i class="fas fa-tachometer-alt"></i></a></li>
+            <li><a href="#" class="tooltipped" data-position="right" data-tooltip="History"><i class="fas fa-history"></i></a></li>
+            <li><a href="#" class="tooltipped" data-position="right" data-tooltip="My Events"><i class="far fa-calendar-alt"></i></a></li>
+            <li><a href="#" class="tooltipped" data-position="right" data-tooltip="Settings"><i class="fas fa-tools"></i></a></li>
+            <li><a href="#" class="profile tooltipped" data-position="right" data-tooltip="My Profile"><i class="far fa-user-circle"></i></i></a></li>
+        </ul>
+    </section>
+
+    <section class="dashboard-wrapper w-100 h-100v">
+        <div class="row w-100 no-spacing">
+            <div class="col s12 m7 dash-info">
+                
+                <section class="dash-info-nav">
+                    <div class="dash-info-logo">
+                        <span>passket</span>
+                    </div>
+
+                    <div class="dash-info-main ">
+                        <h5 class="title">
+                            My Dashboard
+                        </h5>
+
+                        <div class="row no-spacing">
+                            
+                            <!-- Events this week -->
+
+                            <div class="col s12 dash-info-col">
+                                <span class="col-title">
+                                    Events this week
+                                </span>
+
+                                <div class="dateEvent white rowx">
+                                    <div class="colx center-align">
+                                        sun<h6>11</h6>
+                                    </div>
+                                    <div class="colx center-align">
+                                        mon<h6>12</h6>
+                                    </div>
+                                    <div class="colx center-align">
+                                        tue<h6>13</h6>
+                                    </div>
+                                    <div class="colx center-align">
+                                        wed<h6>14</h6>
+                                    </div>
+                                    <div class="colx center-align col-active blue-grey darken-4">
+                                        thu<h6>15</h6>
+                                    </div>
+                                    <div class="colx center-align">
+                                        fri<h6>16</h6>
+                                    </div>
+                                    <div class="colx center-align">
+                                        sat<h6>17</h6>
+                                    </div>
+                                </div>                                
+                            </div>
+
+                            <div class="col s12 dash-info-col">
+                                <span class="col-title">
+                                    Overview
+                                </span>
+
+                                <div class="row no-spacing">
+                                    <div class="col s6 m4">
+                                        <div class="card">
+                                            <div class="card-content">
+                                                <span class="card-title">
+                                                    Events
+                                                </span>
+                                                <p>
+                                                    12
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                   <div class="col s6 m4">
+                                        <div class="card">
+                                            <div class="card-content">
+                                                <span class="card-title">
+                                                    Pending
+                                                </span>
+                                                <p>
+                                                    5
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col s6 m4 ">
+                                        <div class="card blue-grey darken-4 white-text">
+                                            <div class="card-content">
+                                                <span class="card-title">
+                                                    Expired
+                                                </span>
+                                                <p>
+                                                    7
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col s6 m4">
+                                        <div class="card">
+                                            <div class="card-content">
+                                                <span class="card-title">
+                                                    Participation
+                                                </span>
+                                                <p>
+                                                    755
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+
+
+                        </div>
+                    </div>
+                </section>
+                <section class="dash-info-wrapper">
+
+                </section>
+
+            </div>
+            <div class="col s12 m5 white h-100v dash-event">
+               <div class="dash-event-topnav right">
+                    <i class="fas fa-search"></i>
+               </div>
+
+               
+
+               <div class="row event-tabs">
+                    
+                    <div class="col s12">
+                            Your Events
+                            <br><br>
+                      <ul class="tabs blue-grey darken-4 white-text">
+                        <li class="tab col s3"><a class="active" href="#test1">All</a></li>
+                        <li class="tab col s3"><a  href="#test2">Active</a></li>
+                        <li class="tab col s3"><a href="#test4">Expired</a></li>
+                      </ul>
+                    </div>
+                    <div id="test1" class="col s12 event-info-wrapper">
+
+                        <div class="event-info w-100">
+                            <span class="title">
+                                React Native Workshop
+                            </span>
+                            <p>
+                                info info info
+                            </p>
+                        </div>
+
+                        <div class="event-info w-100">
+                            <span class="title">
+                                React Native Workshop
+                            </span>
+                            <p>
+                                info info info
+                            </p>
+                        </div>
+
+                    </div>
+                    <div id="test2" class="col s12 event-info-wrapper">no events</div>
+                    <div id="test4" class="col s12 event-info-wrapper">no events</div>
+                  </div>
+            </div>
+        </div>
+    </section>
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+    <script>
+            $(document).ready(function(){
+            $('.tabs').tabs();
+            $('.tooltipped').tooltip();
+            });
+            
+    </script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+</html>
