@@ -2,9 +2,8 @@ body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   margin: 0;
-  padding: 0 0 0 1em;
   font-family: 'Poppins', sans-serif;
-  background: #EBEBEB;
+  background: #eceff1;
 }
 
 * {
@@ -13,11 +12,15 @@ body {
 }
 
 .no-spacing {
-  margin: 0;
-  padding: 0;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
 .h-100v {
+  height: 100vh;
+}
+
+.h-100vx {
   height: 100vh;
 }
 
@@ -37,14 +40,12 @@ body {
   position: fixed;
   background: #263238;
   width: 4em;
-  border-radius: 2em;
-  margin-top: -5vh;
   -webkit-box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.3);
           box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.3);
 }
 
 .left-navbar ul {
-  padding-top: 7vh;
+  padding-top: 5vh;
   list-style: none;
 }
 
@@ -67,7 +68,7 @@ body {
 
 .left-navbar ul li .active {
   background: #37474f;
-  color: #EBEBEB !important;
+  color: #eceff1 !important;
   border-left: 4px solid #5c6bc0;
 }
 
@@ -79,6 +80,13 @@ body {
   letter-spacing: -0.6em;
   color: #5c6bc0 !important;
   opacity: 0.4;
+}
+
+.topnav-mainlogo {
+  font-weight: 700;
+  font-style: italic;
+  letter-spacing: 0.3em;
+  color: rgba(0, 0, 0, 0.3);
 }
 
 .dashboard-wrapper {
@@ -111,7 +119,7 @@ body {
 }
 
 .dashboard-wrapper .dash-info .dash-info-main .title {
-  font-weight: 800;
+  font-weight: 500;
 }
 
 .dashboard-wrapper .dash-info .dash-info-main .dash-info-col {
@@ -151,7 +159,7 @@ body {
 }
 
 .dashboard-wrapper .dash-info .card {
-  border-radius: 1em !important;
+  border-radius: 0.3em !important;
 }
 
 .dashboard-wrapper .dash-event {
@@ -162,7 +170,7 @@ body {
 }
 
 .dashboard-wrapper .dash-event .dash-event-topnav .search {
-  border: 1px solid #EBEBEB;
+  border: 1px solid #eceff1;
   height: 1.5em;
   border-radius: 2em;
   font-size: 0.8em;
@@ -176,7 +184,7 @@ body {
 
 .dashboard-wrapper .dash-event .event-tabs .tabs .tab a {
   font-size: 1em;
-  color: #EBEBEB;
+  color: #eceff1;
   /*Custom Text Color*/
 }
 
@@ -186,14 +194,14 @@ body {
 }
 
 .dashboard-wrapper .dash-event .event-tabs .tabs .tab a:focus.active {
-  color: #EBEBEB;
+  color: #eceff1;
   /*Custom Text Color While Active*/
   background-color: rgba(0, 0, 0, 0.03);
   /*Custom Background Color While Active*/
 }
 
 .dashboard-wrapper .dash-event .event-tabs .tabs .indicator {
-  background-color: #EBEBEB;
+  background-color: #eceff1;
   /*Custom Color Of Indicator*/
 }
 
@@ -202,7 +210,7 @@ body {
 }
 
 .dashboard-wrapper .dash-event .event-info-wrapper .event-info {
-  background: #EBEBEB;
+  background: #eceff1;
   min-height: 8em;
   border-radius: 0.7em;
   padding: 1em 2em;
@@ -214,6 +222,9 @@ body {
 }
 
 @media only screen and (max-width: 600px) {
+  .h-100vx {
+    height: auto;
+  }
   .left-navbar {
     position: fixed !important;
     background: #263238;
@@ -250,6 +261,83 @@ body {
   .card-title {
     font-size: 1.2em !important;
     font-weight: 500 !important;
+  }
+}
+
+.event-wrapper {
+  padding-left: 3em;
+}
+
+.event-wrapper .event-info-nav {
+  padding-top: 1em;
+  padding-left: 2em;
+}
+
+.event-wrapper .event-info-select {
+  padding-left: 2em;
+  padding-top: 2em;
+}
+
+.event-wrapper .event-info-select .sidetabs {
+  margin-right: -1em;
+  padding-left: 0;
+}
+
+.event-wrapper .event-info-select .sidetabs .tab {
+  margin: 0;
+  padding: 0;
+}
+
+.event-wrapper .event-info-select .sidetabs .tab a {
+  display: block;
+  width: 100%;
+  padding: 2em;
+  color: #263238;
+  margin: 0;
+}
+
+.event-wrapper .event-info-select .sidetabs .tab a h4 {
+  margin: 0;
+}
+
+.event-wrapper .event-info-select .sidetabs .tab a:hover {
+  background: #546e7a;
+  color: white;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.event-wrapper .event-info-select .sidetabs .tab .active {
+  background: #eceff1;
+  border-left: 3px solid #5c6bc0;
+}
+
+.event-wrapper .event-table-wrapper {
+  padding-top: 2em;
+}
+
+.event-wrapper .event-table-wrapper .addbtn {
+  font-size: 0.6em;
+  font-weight: 300;
+}
+
+.event-wrapper .event-table-wrapper table {
+  font-size: 0.8em;
+}
+
+.event-wrapper .event-table-wrapper table a {
+  width: 4em;
+}
+
+@media only screen and (max-width: 600px) {
+  .event-wrapper {
+    padding-left: 0;
+  }
+  .event-info-select {
+    padding-left: 0;
+  }
+  .sidetabs ul li {
+    display: inline-block;
   }
 }
 /*# sourceMappingURL=style.css.map */
