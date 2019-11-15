@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="./assets/img/favicon.ico" />
+    <title>Passket</title>
+
+     <!-- Materialize -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+     
+     <!-- Google Fonts -->
+     <link href="https://fonts.googleapis.com/css?family=Poppins:400,800&display=swap" rel="stylesheet">
+     
+      <!-- My Css -->
+      <link rel="stylesheet" href="./assets/css/style.css">
+      <script src="https://kit.fontawesome.com/f0d8590a67.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="hide-on-small-only">
+        <section class="left-navbar blue-grey darken-4 h-100v center">
+        
+                <ul>
+                    <li class="logo"><a href="#">PK</a></li>
+                    <li><a href="./index.html" class="tooltipped" data-position="right" data-tooltip="Dashboard"><i class="fas fa-tachometer-alt"></i></a></li>
+                    <li><a href="#" class="tooltipped" data-position="right" data-tooltip="History"><i class="fas fa-history"></i></a></li>
+                    <li><a href="#" class="active tooltipped" data-position="right" data-tooltip="My Events"><i class="far fa-calendar-alt"></i></a></li>
+                    <li><a href="#" class="tooltipped" data-position="right" data-tooltip="Settings"><i class="fas fa-tools"></i></a></li>
+                    <li><a href="#" class="profile tooltipped" data-position="right" data-tooltip="My Profile"><i class="far fa-user-circle"></i></i></a></li>
+                </ul>
+                
+        </section>
+    </div>   
+
+    <section class="event-form-wrapper">
+            <div class="topnav-mainlogo">
+                    <span>&nbsp&nbsp&nbsp&nbsppassket</span>
+            </div>
+
+        <div class="row container">
+            <div class="col s12">
+                <div class="card">
+                    <div class="card-content">
+                        <div class="form">
+                            <div class="row">
+                               <div class="col s12">
+                               <ul class="tabs blue-grey darken-3 white-text">
+                                   <li class="tab col s3 disabled"><a href="#test4">Create New Event</a></li>
+                                   <li class="tab col s3"><a class="active" href="#test1">Step 1</a></li>
+                                   <li class="tab col s3"><a href="#test2">Step 2</a></li>
+                                   <li class="tab col s3"><a href="#test3">Step 3</a></li>
+                               </ul>
+                               </div>
+                               <div id="test1" class="col s12">
+
+                                    <form action="">
+                                        <div class="row">
+                                            <div class="input-field col s12 imageFull">  
+                                                <img id="banner" src="./assets/img/upload.png" alt="your image" />
+                                                <div class="file-field input-field">
+                                                    <div class="btn blue-grey darken-3 white-text">
+                                                        <span>Upload Banner</span>
+                                                        <input type="file" onchange="bannerURL(this);">
+                                                    </div>
+                                                    <div class="file-path-wrapper">
+                                                        <input class="file-path validate" type="text">
+                                                    </div>
+                                                </div> 
+                                            </div>
+                                            <div class="input-field col s12">
+                                                <input placeholder="You event title" id="title" type="text" class="validate">
+                                                <label for="title">Event title</label>
+                                            </div>
+                                            <div class="input-field col s12">
+                                                <input placeholder="Where do you plan to organise it" id="first_name" type="text" class="validate">
+                                                <label for="first_name">Venue</label>
+                                            </div>
+                                            <div class="input-field col s12">
+                                                <input placeholder="Address of your venue" id="first_name" type="text" class="validate">
+                                                <label for="first_name">Address</label>
+                                            </div>
+                                            <div class="input-field col s12">
+                                                    <h6>DATE & TIME</h6><br/>
+                                                    <div class="row">
+                                                        <div class="input-field col s6">
+                                                        
+                                                        <input id="icon_prefix" type="date" class="validate">
+                                                        <label for="icon_prefix">Start Date</label>
+                                                        </div>
+                                                        <div class="input-field col s6">
+                                                        
+                                                        <input id="icon_telephone" type="time" class="validate">
+                                                        <label for="icon_telephone">Start Time</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                            <div class="input-field col s6">
+                                                            
+                                                            <input id="icon_prefix" type="date" class="validate">
+                                                            <label for="icon_prefix">End Date</label>
+                                                            </div>
+                                                            <div class="input-field col s6">
+                                                            
+                                                            <input id="icon_telephone" type="time" class="validate">
+                                                            <label for="icon_telephone">End Time</label>
+                                                            </div>
+                                                        </div>
+                                            </div>
+                                            <div class="input-field col s12">
+                                                <h6>EVENT DESCRIPTION</h6><br/>
+                                            </div>
+                                            <div class="input-field col s12">
+                                                <button class="btn waves-effect waves-light right blue-grey darken-3 white-text" type="submit" name="action">Next step</button>
+                                            </div>
+                                    </form>
+
+                                    <script>
+                                        document.addEventListener('DOMContentLoaded', function() {
+                                            var elems = document.querySelectorAll('.datepicker');
+                                            var instances = M.Datepicker.init(elems, options);
+                                        });
+                                        
+                                            function bannerURL(input) {
+                                                if (input.files && input.files[0]) {
+                                                    var reader = new FileReader();
+
+                                                    reader.onload = function (e) {
+                                                        $('#banner')
+                                                            .attr('src', e.target.result)
+                                                    };
+
+                                                    reader.readAsDataURL(input.files[0]);
+                                                }
+                                            }  
+                                    </script>                                
+                               </div>
+
+                               <div id="test2" class="col s12">
+                                   <div class="card"></div>
+                               </div>
+
+                               <div id="test3" class="col s12">
+                                   Test 3
+                                </div>
+                           </div>
+                       </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+    </section>
+
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+    <script>
+            $(document).ready(function(){
+            $('.sidetabs').tabs();
+            $('.tabs').tabs();
+            $('.tooltipped').tooltip();
+            });
+            
+    </script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+</html>

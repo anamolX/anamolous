@@ -353,7 +353,85 @@ body{
                 display:inline-block;               
             }
         }
+    }    
+}
+
+.event-form-wrapper{
+    padding-left:4em;
+    padding-top:2em;
+
+    .card{
+        margin-top:5em;
     }
 
-    
+    .form{
+        margin-top:5em;
+        background:white;
+
+        .tabs .tab a {
+            font-size:1em;
+            color:$std_backGrey;
+        /*Custom Text Color*/
+        }
+
+        .tabs .tab a:hover {
+        background:#37474f;
+        /*Custom Color On Hover*/
+        }
+
+        .tabs .tab a:focus.active {
+        color:$std_backGrey;
+        /*Custom Text Color While Active*/
+        background-color:rgba(0,0,0,0.03);
+        /*Custom Background Color While Active*/
+        }
+
+        .tabs .indicator {
+        background-color:$std_backGrey;
+        /*Custom Color Of Indicator*/
+        }
+
+        .tabs{
+            .active{
+                background:$std_violet!important;
+            }
+            .disable{
+                color:$std_violet!important;
+            }
+        }
+
+        form{
+            padding-top:5em;
+
+            #banner{
+                width:100%;
+                height:30vh;
+                object-fit: cover;
+            }
+            
+        }
+    }
+}
+
+.profile-wrapper{
+    .profile-image{
+        img{
+            width:10em;
+            height:10em;
+            object-fit: cover;
+            border-radius:10em;
+        }
+
+        p{
+            font-size:0.8em;
+            color:$black_l1
+        }
+        .progress{
+            width:30%;
+            margin:auto;
+            .determinate{
+                color:$std_violet!important;
+            }
+        }
+    }
 }
