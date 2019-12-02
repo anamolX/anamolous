@@ -89,6 +89,21 @@ body {
   color: rgba(0, 0, 0, 0.3);
 }
 
+.mob-nav {
+  padding-left: 1em;
+  position: fixed;
+  z-index: 99;
+}
+
+.apptrigger {
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 1em;
+  margin-top: -1em;
+  cursor: pointer;
+}
+
 .dashboard-wrapper {
   padding-left: 6em;
   -webkit-box-sizing: border-box;
@@ -207,6 +222,8 @@ body {
 
 .dashboard-wrapper .dash-event .event-info-wrapper {
   margin-top: 1em;
+  overflow-y: scroll;
+  height: 63vh;
 }
 
 .dashboard-wrapper .dash-event .event-info-wrapper .event-info {
@@ -219,6 +236,12 @@ body {
 
 .dashboard-wrapper .dash-event .event-info-wrapper .event-info .title {
   font-weight: 800;
+}
+
+.dashboard-wrapper .dash-event .event-info-wrapper::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: #F5F5F5;
 }
 
 @media only screen and (max-width: 600px) {
@@ -235,6 +258,7 @@ body {
             box-sizing: border-box;
   }
   .dashboard-wrapper {
+    margin-top: 2em;
     padding-left: 0;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
@@ -397,6 +421,12 @@ body {
      object-fit: cover;
 }
 
+@media only screen and (max-width: 600px) {
+  .event-form-wrapper {
+    padding-left: 0;
+  }
+}
+
 .profile-wrapper .profile-image img {
   width: 10em;
   height: 10em;
@@ -417,5 +447,13 @@ body {
 
 .profile-wrapper .profile-image .progress .determinate {
   color: #5c6bc0 !important;
+}
+
+.cx {
+  font-size: 0.8em;
+}
+
+.cx .card-title {
+  font-size: 1.5em;
 }
 /*# sourceMappingURL=style.css.map */
